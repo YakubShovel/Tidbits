@@ -1,0 +1,408 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		02434944BA1B67431A82CF9C /* Pods_Edun_PhotoVault.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F34C4EEAAC6670AAFBC15 /* Pods_Edun_PhotoVault.framework */; };
+		30A0B83B1F13D18A00A3E739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B83A1F13D18A00A3E739 /* AppDelegate.swift */; };
+		30A0B83D1F13D18A00A3E739 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B83C1F13D18A00A3E739 /* LoginViewController.swift */; };
+		30A0B8401F13D18A00A3E739 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0B83E1F13D18A00A3E739 /* Main.storyboard */; };
+		30A0B8421F13D18A00A3E739 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30A0B8411F13D18A00A3E739 /* Assets.xcassets */; };
+		30A0B8451F13D18A00A3E739 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0B8431F13D18A00A3E739 /* LaunchScreen.storyboard */; };
+		30A0B8531F13FE8900A3E739 /* HomeScreenTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8521F13FE8900A3E739 /* HomeScreenTabBarController.swift */; };
+		30A0B8551F14056700A3E739 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8541F14056700A3E739 /* ProjectsTableViewController.swift */; };
+		30A0B8571F16530900A3E739 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 30A0B8561F16530900A3E739 /* GoogleService-Info (1).plist */; };
+		30A0B8591F165E5200A3E739 /* NewWorkspaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8581F165E5200A3E739 /* NewWorkspaceViewController.swift */; };
+		30A0B85B1F166A3200A3E739 /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B85A1F166A3200A3E739 /* UITextViewPlaceholder.swift */; };
+		30A0B85D1F16763300A3E739 /* TidbitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B85C1F16763300A3E739 /* TidbitsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		30A0B8371F13D18A00A3E739 /* Edun_PhotoVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edun_PhotoVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30A0B83A1F13D18A00A3E739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		30A0B83C1F13D18A00A3E739 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		30A0B83F1F13D18A00A3E739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30A0B8411F13D18A00A3E739 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30A0B8441F13D18A00A3E739 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		30A0B8461F13D18A00A3E739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30A0B8521F13FE8900A3E739 /* HomeScreenTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeScreenTabBarController.swift; path = ../HomeScreenTabBarController.swift; sourceTree = "<group>"; };
+		30A0B8541F14056700A3E739 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
+		30A0B8561F16530900A3E739 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (1).plist"; path = "../../../../Downloads/GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		30A0B8581F165E5200A3E739 /* NewWorkspaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWorkspaceViewController.swift; sourceTree = "<group>"; };
+		30A0B85A1F166A3200A3E739 /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
+		30A0B85C1F16763300A3E739 /* TidbitsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TidbitsViewController.swift; sourceTree = "<group>"; };
+		5C602FA69FAC38FEA386A6C2 /* Pods-Edun_PhotoVault.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edun_PhotoVault.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Edun_PhotoVault/Pods-Edun_PhotoVault.debug.xcconfig"; sourceTree = "<group>"; };
+		C1CE650C156A0B2969265894 /* Pods-Edun_PhotoVault.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edun_PhotoVault.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edun_PhotoVault/Pods-Edun_PhotoVault.release.xcconfig"; sourceTree = "<group>"; };
+		DE0F34C4EEAAC6670AAFBC15 /* Pods_Edun_PhotoVault.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Edun_PhotoVault.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30A0B8341F13D18A00A3E739 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02434944BA1B67431A82CF9C /* Pods_Edun_PhotoVault.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30A0B82E1F13D18A00A3E739 = {
+			isa = PBXGroup;
+			children = (
+				30A0B8391F13D18A00A3E739 /* Edun_PhotoVault */,
+				30A0B8381F13D18A00A3E739 /* Products */,
+				DD0280CA24902A8936DF66B6 /* Pods */,
+				CBCD8234E856B3696C835742 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		30A0B8381F13D18A00A3E739 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30A0B8371F13D18A00A3E739 /* Edun_PhotoVault.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30A0B8391F13D18A00A3E739 /* Edun_PhotoVault */ = {
+			isa = PBXGroup;
+			children = (
+				30A0B83A1F13D18A00A3E739 /* AppDelegate.swift */,
+				30A0B83C1F13D18A00A3E739 /* LoginViewController.swift */,
+				30A0B8521F13FE8900A3E739 /* HomeScreenTabBarController.swift */,
+				30A0B83E1F13D18A00A3E739 /* Main.storyboard */,
+				30A0B85C1F16763300A3E739 /* TidbitsViewController.swift */,
+				30A0B8581F165E5200A3E739 /* NewWorkspaceViewController.swift */,
+				30A0B85A1F166A3200A3E739 /* UITextViewPlaceholder.swift */,
+				30A0B8541F14056700A3E739 /* ProjectsTableViewController.swift */,
+				30A0B8411F13D18A00A3E739 /* Assets.xcassets */,
+				30A0B8431F13D18A00A3E739 /* LaunchScreen.storyboard */,
+				30A0B8561F16530900A3E739 /* GoogleService-Info (1).plist */,
+				30A0B8461F13D18A00A3E739 /* Info.plist */,
+			);
+			path = Edun_PhotoVault;
+			sourceTree = "<group>";
+		};
+		CBCD8234E856B3696C835742 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DE0F34C4EEAAC6670AAFBC15 /* Pods_Edun_PhotoVault.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD0280CA24902A8936DF66B6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C602FA69FAC38FEA386A6C2 /* Pods-Edun_PhotoVault.debug.xcconfig */,
+				C1CE650C156A0B2969265894 /* Pods-Edun_PhotoVault.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30A0B8361F13D18A00A3E739 /* Edun_PhotoVault */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30A0B8491F13D18A00A3E739 /* Build configuration list for PBXNativeTarget "Edun_PhotoVault" */;
+			buildPhases = (
+				A86C49F1DE4044483E08D15B /* [CP] Check Pods Manifest.lock */,
+				30A0B8331F13D18A00A3E739 /* Sources */,
+				30A0B8341F13D18A00A3E739 /* Frameworks */,
+				30A0B8351F13D18A00A3E739 /* Resources */,
+				01494DC407C84F0D94B62DB3 /* [CP] Embed Pods Frameworks */,
+				76E328CDD96933442CD36A77 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Edun_PhotoVault;
+			productName = Edun_PhotoVault;
+			productReference = 30A0B8371F13D18A00A3E739 /* Edun_PhotoVault.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30A0B82F1F13D18A00A3E739 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Jacob Shavel";
+				TargetAttributes = {
+					30A0B8361F13D18A00A3E739 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 30A0B8321F13D18A00A3E739 /* Build configuration list for PBXProject "Edun_PhotoVault" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 30A0B82E1F13D18A00A3E739;
+			productRefGroup = 30A0B8381F13D18A00A3E739 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30A0B8361F13D18A00A3E739 /* Edun_PhotoVault */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30A0B8351F13D18A00A3E739 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A0B8451F13D18A00A3E739 /* LaunchScreen.storyboard in Resources */,
+				30A0B8421F13D18A00A3E739 /* Assets.xcassets in Resources */,
+				30A0B8401F13D18A00A3E739 /* Main.storyboard in Resources */,
+				30A0B8571F16530900A3E739 /* GoogleService-Info (1).plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01494DC407C84F0D94B62DB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Edun_PhotoVault/Pods-Edun_PhotoVault-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		76E328CDD96933442CD36A77 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Edun_PhotoVault/Pods-Edun_PhotoVault-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A86C49F1DE4044483E08D15B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30A0B8331F13D18A00A3E739 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30A0B8531F13FE8900A3E739 /* HomeScreenTabBarController.swift in Sources */,
+				30A0B8551F14056700A3E739 /* ProjectsTableViewController.swift in Sources */,
+				30A0B83D1F13D18A00A3E739 /* LoginViewController.swift in Sources */,
+				30A0B85D1F16763300A3E739 /* TidbitsViewController.swift in Sources */,
+				30A0B85B1F166A3200A3E739 /* UITextViewPlaceholder.swift in Sources */,
+				30A0B83B1F13D18A00A3E739 /* AppDelegate.swift in Sources */,
+				30A0B8591F165E5200A3E739 /* NewWorkspaceViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		30A0B83E1F13D18A00A3E739 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30A0B83F1F13D18A00A3E739 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		30A0B8431F13D18A00A3E739 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30A0B8441F13D18A00A3E739 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		30A0B8471F13D18A00A3E739 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		30A0B8481F13D18A00A3E739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30A0B84A1F13D18A00A3E739 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C602FA69FAC38FEA386A6C2 /* Pods-Edun_PhotoVault.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Edun_PhotoVault/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jacob-Shavel.Edun-PhotoVault";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		30A0B84B1F13D18A00A3E739 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1CE650C156A0B2969265894 /* Pods-Edun_PhotoVault.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Edun_PhotoVault/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Jacob-Shavel.Edun-PhotoVault";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30A0B8321F13D18A00A3E739 /* Build configuration list for PBXProject "Edun_PhotoVault" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30A0B8471F13D18A00A3E739 /* Debug */,
+				30A0B8481F13D18A00A3E739 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30A0B8491F13D18A00A3E739 /* Build configuration list for PBXNativeTarget "Edun_PhotoVault" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30A0B84A1F13D18A00A3E739 /* Debug */,
+				30A0B84B1F13D18A00A3E739 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 30A0B82F1F13D18A00A3E739 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_Edun_PhotoVault {
+  umbrella header "Pods-Edun_PhotoVault-umbrella.h"
+
+  export *
+  module * { export * }
+}
