@@ -11,6 +11,7 @@ pod 'KeychainSwift'
 pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'Firebase/Storage'
+pod 'Alamofire'
 pod 'AlamofireImage'
 
 end

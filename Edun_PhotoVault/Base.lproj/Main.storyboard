@@ -63,42 +63,46 @@
             </objects>
             <point key="canvasLocation" x="1076" y="137.18140929535232"/>
         </scene>
-        <!--Tidbits-->
-        <scene sceneID="8MV-Wx-7Q1">
+        <!--Tidbits Collection View Controller-->
+        <scene sceneID="AU6-UJ-WAn">
             <objects>
-                <viewController id="Cc6-NB-Dfd" customClass="TidbitsViewController" customModule="Edun_PhotoVault" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wqw-2s-lb9"/>
-                        <viewControllerLayoutGuide type="bottom" id="QbQ-fC-ckd"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KEf-4l-ce4">
+                <collectionViewController id="VJv-g9-7re" customClass="TidbitsCollectionViewController" customModule="Edun_PhotoVault" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3yI-EH-shC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fc-Pq-Bem">
-                                <rect key="frame" x="175" y="321" width="24" height="24"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="24" id="Rpe-FD-LRV"/>
-                                </constraints>
-                                <state key="normal" title="New Project" image="AddProjectButton"/>
-                                <connections>
-                                    <segue destination="IG0-Fe-8hw" kind="popoverPresentation" popoverAnchorView="0fc-Pq-Bem" id="Gez-oW-O6j">
-                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
-                                    </segue>
-                                </connections>
-                            </button>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="0fc-Pq-Bem" firstAttribute="centerX" secondItem="KEf-4l-ce4" secondAttribute="centerX" id="C3O-hc-hIa"/>
-                            <constraint firstItem="0fc-Pq-Bem" firstAttribute="centerY" secondItem="KEf-4l-ce4" secondAttribute="centerY" id="vWg-me-r4u"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Tidbits" id="NJW-Ht-Qtv"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="rFG-wZ-KKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b4M-7H-ek9">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="j5u-MV-bsj">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="VJv-g9-7re" id="7Ut-9c-L5U"/>
+                            <outlet property="delegate" destination="VJv-g9-7re" id="YmW-BQ-qHn"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="lMQ-0y-o7M">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="kVo-1P-Xum">
+                            <connections>
+                                <segue destination="6RZ-WA-o0q" kind="presentation" id="DfI-9l-hSa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pVR-6V-F00" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2932" y="461.91904047976016"/>
+            <point key="canvasLocation" x="4820" y="1139.2803598200901"/>
         </scene>
         <!--New Workspace View Controller-->
         <scene sceneID="wh3-tr-rLm">
@@ -162,7 +166,7 @@
                     <navigationItem key="navigationItem" id="riY-Ux-Tj9">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vMw-sk-PnK">
                             <connections>
-                                <segue destination="Cc6-NB-Dfd" kind="show" id="1w9-kW-rPI"/>
+                                <action selector="cancelWasTapped:" destination="Y5X-bL-2BT" id="YIY-Xk-BrW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -172,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LcT-QP-pZm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5236" y="113.79310344827587"/>
+            <point key="canvasLocation" x="8053.6000000000004" y="113.79310344827587"/>
         </scene>
         <!--Home Screen Tab Bar Controller-->
         <scene sceneID="moA-iM-OWi">
@@ -184,15 +188,15 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="Cc6-NB-Dfd" kind="relationship" relationship="viewControllers" id="EI5-2N-AqG"/>
-                        <segue destination="1d1-aT-waU" kind="relationship" relationship="viewControllers" id="FkV-ut-CsE"/>
+                        <segue destination="nQn-pA-ygp" kind="relationship" relationship="viewControllers" id="awW-v1-4ku"/>
+                        <segue destination="kFO-8k-gje" kind="relationship" relationship="viewControllers" id="q49-Gs-Icy"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfS-Ok-ABn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1972" y="136.28185907046478"/>
         </scene>
-        <!--Projects-->
+        <!--Projects Table View Controller-->
         <scene sceneID="U8w-Zw-IZI">
             <objects>
                 <tableViewController id="1d1-aT-waU" customClass="ProjectsTableViewController" customModule="Edun_PhotoVault" customModuleProvider="target" sceneMemberID="viewController">
@@ -205,7 +209,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Spn-gZ-1eQ" id="5JJ-AD-NKi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -215,35 +219,81 @@
                             <outlet property="delegate" destination="1d1-aT-waU" id="l2j-QZ-KK9"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Projects" id="hhr-M5-7QC"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="dfH-BK-pXl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="compose" id="LSj-4V-Cw1">
+                            <connections>
+                                <segue destination="6RZ-WA-o0q" kind="presentation" id="ZKM-xw-vUV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBP-qA-Qvp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2955" y="-313"/>
+            <point key="canvasLocation" x="4832.8000000000002" y="-313.49325337331339"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="nEq-r8-cWn">
+        <scene sceneID="qrf-8K-AjU">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IG0-Fe-8hw" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6RZ-WA-o0q" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="g9e-kn-2Z2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DIc-NJ-iYy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Y5X-bL-2BT" kind="relationship" relationship="rootViewController" id="as6-3P-Iqe"/>
+                        <segue destination="Y5X-bL-2BT" kind="relationship" relationship="rootViewController" id="yJU-eJ-2Ik"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NUX-6G-XOF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9zO-EV-2If" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4296.8000000000002" y="113.79310344827587"/>
+            <point key="canvasLocation" x="7114.3999999999996" y="113.79310344827587"/>
+        </scene>
+        <!--Projects-->
+        <scene sceneID="Hvc-qH-tsw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nQn-pA-ygp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Projects" image="ProjectsIcon" selectedImage="ProjectsIcon" id="4MF-ge-rk1"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GVy-Aq-aHY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1d1-aT-waU" kind="relationship" relationship="rootViewController" id="Pix-mH-LgW"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XPp-dP-ird" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3893.5999999999999" y="-313.49325337331339"/>
+        </scene>
+        <!--Tidbits-->
+        <scene sceneID="d6b-gx-wiU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kFO-8k-gje" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tidbits" id="vJK-5g-pKq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dJJ-qv-TgK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="VJv-g9-7re" kind="relationship" relationship="rootViewController" id="e28-3L-nmk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LOf-Q7-wkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3880.8000000000002" y="1139.2803598200901"/>
         </scene>
     </scenes>
     <resources>
-        <image name="AddProjectButton" width="24" height="24"/>
+        <image name="ProjectsIcon" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1w9-kW-rPI"/>
+        <segue reference="ZKM-xw-vUV"/>
     </inferredMetricsTieBreakers>
 </document>
