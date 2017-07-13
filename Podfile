@@ -9,9 +9,7 @@ target 'Edun_PhotoVault' do
 pod ‘SmileLock’
 pod 'KeychainSwift'
 pod 'Firebase'
-pod 'Firebase/Auth'
-pod 'Firebase/Storage'
 pod 'Alamofire'
-pod 'AlamofireImage'
+pod 'Gloss'
 
 end

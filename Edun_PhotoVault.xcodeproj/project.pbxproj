@@ -16,9 +16,8 @@
 		30A0B8531F13FE8900A3E739 /* HomeScreenTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8521F13FE8900A3E739 /* HomeScreenTabBarController.swift */; };
 		30A0B8551F14056700A3E739 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8541F14056700A3E739 /* ProjectsTableViewController.swift */; };
 		30A0B8571F16530900A3E739 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 30A0B8561F16530900A3E739 /* GoogleService-Info (1).plist */; };
-		30A0B8591F165E5200A3E739 /* NewWorkspaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8581F165E5200A3E739 /* NewWorkspaceViewController.swift */; };
-		30A0B85B1F166A3200A3E739 /* UITextViewPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B85A1F166A3200A3E739 /* UITextViewPlaceholder.swift */; };
-		30A0B85F1F169C0600A3E739 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B85E1F169C0600A3E739 /* Session.swift */; };
+		30A0B8591F165E5200A3E739 /* NewDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8581F165E5200A3E739 /* NewDocumentViewController.swift */; };
+		30A0B85F1F169C0600A3E739 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B85E1F169C0600A3E739 /* Document.swift */; };
 		30A0B8611F178A7600A3E739 /* TidbitsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8601F178A7600A3E739 /* TidbitsCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,9 +32,8 @@
 		30A0B8521F13FE8900A3E739 /* HomeScreenTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeScreenTabBarController.swift; path = ../HomeScreenTabBarController.swift; sourceTree = "<group>"; };
 		30A0B8541F14056700A3E739 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
 		30A0B8561F16530900A3E739 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (1).plist"; path = "../../../../Downloads/GoogleService-Info (1).plist"; sourceTree = "<group>"; };
-		30A0B8581F165E5200A3E739 /* NewWorkspaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewWorkspaceViewController.swift; sourceTree = "<group>"; };
-		30A0B85A1F166A3200A3E739 /* UITextViewPlaceholder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextViewPlaceholder.swift; sourceTree = "<group>"; };
-		30A0B85E1F169C0600A3E739 /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		30A0B8581F165E5200A3E739 /* NewDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewDocumentViewController.swift; sourceTree = "<group>"; };
+		30A0B85E1F169C0600A3E739 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		30A0B8601F178A7600A3E739 /* TidbitsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TidbitsCollectionViewController.swift; sourceTree = "<group>"; };
 		5C602FA69FAC38FEA386A6C2 /* Pods-Edun_PhotoVault.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edun_PhotoVault.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Edun_PhotoVault/Pods-Edun_PhotoVault.debug.xcconfig"; sourceTree = "<group>"; };
 		C1CE650C156A0B2969265894 /* Pods-Edun_PhotoVault.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edun_PhotoVault.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edun_PhotoVault/Pods-Edun_PhotoVault.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,12 +76,11 @@
 				30A0B83A1F13D18A00A3E739 /* AppDelegate.swift */,
 				30A0B83C1F13D18A00A3E739 /* LoginViewController.swift */,
 				30A0B8521F13FE8900A3E739 /* HomeScreenTabBarController.swift */,
-				30A0B83E1F13D18A00A3E739 /* Main.storyboard */,
 				30A0B8601F178A7600A3E739 /* TidbitsCollectionViewController.swift */,
-				30A0B85E1F169C0600A3E739 /* Session.swift */,
-				30A0B8581F165E5200A3E739 /* NewWorkspaceViewController.swift */,
-				30A0B85A1F166A3200A3E739 /* UITextViewPlaceholder.swift */,
+				30A0B85E1F169C0600A3E739 /* Document.swift */,
+				30A0B8581F165E5200A3E739 /* NewDocumentViewController.swift */,
 				30A0B8541F14056700A3E739 /* ProjectsTableViewController.swift */,
+				30A0B83E1F13D18A00A3E739 /* Main.storyboard */,
 				30A0B8411F13D18A00A3E739 /* Assets.xcassets */,
 				30A0B8431F13D18A00A3E739 /* LaunchScreen.storyboard */,
 				30A0B8561F16530900A3E739 /* GoogleService-Info (1).plist */,
@@ -237,10 +234,9 @@
 				30A0B8611F178A7600A3E739 /* TidbitsCollectionViewController.swift in Sources */,
 				30A0B8551F14056700A3E739 /* ProjectsTableViewController.swift in Sources */,
 				30A0B83D1F13D18A00A3E739 /* LoginViewController.swift in Sources */,
-				30A0B85F1F169C0600A3E739 /* Session.swift in Sources */,
-				30A0B85B1F166A3200A3E739 /* UITextViewPlaceholder.swift in Sources */,
+				30A0B85F1F169C0600A3E739 /* Document.swift in Sources */,
 				30A0B83B1F13D18A00A3E739 /* AppDelegate.swift in Sources */,
-				30A0B8591F165E5200A3E739 /* NewWorkspaceViewController.swift in Sources */,
+				30A0B8591F165E5200A3E739 /* NewDocumentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

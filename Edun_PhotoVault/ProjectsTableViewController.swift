@@ -7,11 +7,44 @@
 //
 
 import UIKit
+import Alamofire
 
 class ProjectsTableViewController: UITableViewController {
 
+    var documents: [Document] = []
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        Alamofire.request("https://tidbits-57ae3.firebaseio.com/documents.json", method: .get, encoding: JSONEncoding.default).responseJSON(completionHandler: {
+            response in
+            
+            self.documents = []
+            
+            if let json = response.result.value as? [String: AnyObject] {
+                
+                for (key, value) in json {
+                    if let documentDictionary = value as? [String: AnyObject] {
+                        let document = Document(json: documentDictionary)
+                        document?.key = key
+                        if document?.identifier == "Project" {
+                            self.documents.append(document!)
+                        }
+                    }
+                }
+                
+                self.tableView.reloadData()
+                
+            }
+        })
+        
+        
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -29,23 +62,50 @@ class ProjectsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return documents.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
+        cell.textLabel?.text = documents[indexPath.row].title
+        
+        /*let dateFormatter = DateFormatter()
+        let mostRecentDateString = dateFormatter.string(from: documents[indexPath.row].mostRecentEdit!)
+        cell.?.text = mostRecentDateString*/
+        
 
         // Configure the cell...
 
         return cell
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "navToEditFromCell" {
+            
+            let cell = sender as! UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)
+            let selectedDocument = documents[(indexPath?.row)!]
+            
+            let documentNavController = segue.destination as! UINavigationController
+            let documentVC = documentNavController.topViewController as! NewDocumentViewController
+            documentVC.document = selectedDocument
+        }
+        
+        // 1. get indexPath 
+        // 2. get the selected document
+        // segue.destination cast to your view controller
+        // set the document
+        
+        
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
