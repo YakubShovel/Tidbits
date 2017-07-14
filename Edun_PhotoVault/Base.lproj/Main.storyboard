@@ -26,24 +26,33 @@
                                 <rect key="frame" x="63" y="277" width="249" height="317"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password Query" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5C-vh-MH1">
-                                <rect key="frame" x="16" y="109" width="343" height="127"/>
+                                <rect key="frame" x="16" y="123" width="343" height="127"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="127" id="pNd-sl-GE3"/>
+                                    <constraint firstAttribute="height" constant="127" id="P1l-FZ-xMd"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TidbitsTitle" translatesAutoresizingMaskIntoConstraints="NO" id="ia2-25-slV">
+                                <rect key="frame" x="63" y="20" width="202" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="145" id="NQ1-5E-F4U"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="m5C-vh-MH1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="0Vi-o2-G7J"/>
-                            <constraint firstItem="m5C-vh-MH1" firstAttribute="centerX" secondItem="Cf5-60-CNS" secondAttribute="centerX" id="8om-j3-5H6"/>
-                            <constraint firstItem="Cf5-60-CNS" firstAttribute="top" secondItem="m5C-vh-MH1" secondAttribute="bottom" constant="41" id="bU5-FE-7qK"/>
-                            <constraint firstItem="m5C-vh-MH1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dkH-r8-EwX"/>
-                            <constraint firstItem="Cf5-60-CNS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="47" id="hC9-TI-0iq"/>
-                            <constraint firstItem="m5C-vh-MH1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="89" id="not-qs-ge1"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cf5-60-CNS" secondAttribute="bottom" constant="73" id="yv9-0q-xCI"/>
+                            <constraint firstItem="m5C-vh-MH1" firstAttribute="centerX" secondItem="Cf5-60-CNS" secondAttribute="centerX" id="0DV-mr-Xm7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ia2-25-slV" secondAttribute="trailing" constant="94" id="6qM-1X-y6d"/>
+                            <constraint firstItem="ia2-25-slV" firstAttribute="leading" secondItem="Cf5-60-CNS" secondAttribute="leading" id="G62-zS-zL5"/>
+                            <constraint firstItem="Cf5-60-CNS" firstAttribute="top" secondItem="m5C-vh-MH1" secondAttribute="bottom" constant="27" id="Ntn-SZ-lew"/>
+                            <constraint firstItem="ia2-25-slV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="RJf-JI-FdY"/>
+                            <constraint firstItem="m5C-vh-MH1" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WbO-9E-Ux3"/>
+                            <constraint firstItem="m5C-vh-MH1" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="103" id="lDx-T9-Vda"/>
+                            <constraint firstItem="m5C-vh-MH1" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lYd-1B-obd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Cf5-60-CNS" secondAttribute="bottom" constant="73" id="qr8-TY-oXZ"/>
+                            <constraint firstItem="ia2-25-slV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="47" id="tZi-dT-qgq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6UB-5Q-v5S">
@@ -67,8 +76,8 @@
         <scene sceneID="AU6-UJ-WAn">
             <objects>
                 <collectionViewController id="VJv-g9-7re" customClass="TidbitsCollectionViewController" customModule="Edun_PhotoVault" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3yI-EH-shC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="3yI-EH-shC">
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="b4M-7H-ek9">
@@ -78,13 +87,28 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="j5u-MV-bsj">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tibitCell" id="j5u-MV-bsj" customClass="TidbitCollectionViewCell" customModule="Edun_PhotoVault" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="123" height="123"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="123" height="123"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aEg-Vf-800">
+                                            <rect key="frame" x="18" y="14" width="87" height="94"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </view>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                <size key="customSize" width="123" height="123"/>
+                                <connections>
+                                    <outlet property="tidbitText" destination="aEg-Vf-800" id="EV8-VT-9cY"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -99,6 +123,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVR-6V-F00" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -113,11 +138,11 @@
                         <viewControllerLayoutGuide type="bottom" id="oNv-w2-x1c"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="F6O-IB-i48">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pxg-Ei-93D">
-                                <rect key="frame" x="217" y="64" width="142" height="21"/>
+                                <rect key="frame" x="217" y="0.0" width="142" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="142" id="NlW-i0-fym"/>
                                 </constraints>
@@ -126,13 +151,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Project Title" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5Rg-VD-h4T">
-                                <rect key="frame" x="16" y="93" width="245" height="30"/>
+                                <rect key="frame" x="16" y="29" width="245" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardAppearance="alert"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="d2Y-Q0-BpH">
-                                <rect key="frame" x="16" y="173" width="343" height="451"/>
+                                <rect key="frame" x="16" y="109" width="343" height="451"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -142,7 +167,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="210" id="8sQ-PL-KFL"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -205,8 +230,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="nQn-pA-ygp" kind="relationship" relationship="viewControllers" id="awW-v1-4ku"/>
                         <segue destination="kFO-8k-gje" kind="relationship" relationship="viewControllers" id="q49-Gs-Icy"/>
+                        <segue destination="nQn-pA-ygp" kind="relationship" relationship="viewControllers" id="awW-v1-4ku"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfS-Ok-ABn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -218,7 +243,7 @@
             <objects>
                 <tableViewController id="1d1-aT-waU" customClass="ProjectsTableViewController" customModule="Edun_PhotoVault" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="xTg-NM-G8y">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -226,11 +251,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Spn-gZ-1eQ" id="5JJ-AD-NKi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HRD-GX-zDl">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -267,7 +292,8 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6RZ-WA-o0q" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DIc-NJ-iYy">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="DIc-NJ-iYy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -286,7 +312,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="nQn-pA-ygp" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Projects" image="ProjectsIcon" selectedImage="ProjectsIcon" id="4MF-ge-rk1"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GVy-Aq-aHY">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="GVy-Aq-aHY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -303,9 +330,10 @@
         <scene sceneID="d6b-gx-wiU">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kFO-8k-gje" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Tidbits" id="vJK-5g-pKq"/>
+                    <tabBarItem key="tabBarItem" title="Tidbits" image="TidbitsT" selectedImage="TidbitsT" id="vJK-5g-pKq"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dJJ-qv-TgK">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="dJJ-qv-TgK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -321,8 +349,10 @@
     </scenes>
     <resources>
         <image name="ProjectsIcon" width="24" height="24"/>
+        <image name="TidbitsT" width="24" height="24"/>
+        <image name="TidbitsTitle" width="1542" height="1319"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CBh-bd-ALv"/>
+        <segue reference="DfI-9l-hSa"/>
     </inferredMetricsTieBreakers>
 </document>

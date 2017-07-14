@@ -7,58 +7,110 @@
 //
 
 import UIKit
+import Alamofire
 
-private let reuseIdentifier = "Cell"
+//private let reuseIdentifier = "Cell"
 
 class TidbitsCollectionViewController: UICollectionViewController {
 
+    
+    var documents: [Document] = []
+
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        Alamofire.request("https://tidbits-57ae3.firebaseio.com/documents.json", method: .get, encoding: JSONEncoding.default).responseJSON(completionHandler: {
+            response in
+            
+            self.documents = []
+            
+            if let json = response.result.value as? [String: AnyObject] {
+                
+                for (key, value) in json {
+                    if let documentDictionary = value as? [String: AnyObject] {
+                        let document = Document(json: documentDictionary)
+                        document?.key = key
+                        if document?.identifier == "Tidbit" {
+                            self.documents.append(document!)
+                        }
+                    }
+                }
+                self.collectionView?.reloadData()
+            }
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+    // #warning Incomplete implementation, return the number of sections
+        return 1
+    }
+    
+    /*override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        //THIS FUNCTION IS CAUSING THE SIG ABORT!!!
+        return documents.count
+    }*/
+    
+    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tidbitCell", for: indexPath) as! TidbitCollectionViewCell
+        
+        cell.tidbitText?.text = documents[indexPath.row].text   
+        
+                // Configure the cell
+        
+        return cell
+    }
+    
+}
+
+
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+    
 
         // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-    // MARK: UICollectionViewDataSource
-
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
-        return cell
-    }
+//    override func didReceiveMemoryWarning() {
+//        super.didReceiveMemoryWarning()
+//        // Dispose of any resources that can be recreated.
+//    }
+//
+//    /*
+//    // MARK: - Navigation
+//
+//    // In a storyboard-based application, you will often want to do a little preparation before navigation
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        // Get the new view controller using [segue destinationViewController].
+//        // Pass the selected object to the new view controller.
+//    }
+//    */
+//
+//    // MARK: UICollectionViewDataSource
+//
+//
+//
+//
+//    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        // #warning Incomplete implementation, return the number of items
+//        return 0
+//    }
+//
+//    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! TidbitCollectionViewCell
+//    
+//        // Configure the cell
+//    
+//        return cell
+//    }
 
     // MARK: UICollectionViewDelegate
 
@@ -91,4 +143,4 @@ class TidbitsCollectionViewController: UICollectionViewController {
     }
     */
 
-}
+

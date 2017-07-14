@@ -31,14 +31,9 @@ class ProjectsTableViewController: UITableViewController {
                         }
                     }
                 }
-                
                 self.tableView.reloadData()
-                
             }
         })
-        
-        
-
     }
     
     override func viewDidLoad() {
@@ -74,14 +69,6 @@ class ProjectsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
         cell.textLabel?.text = documents[indexPath.row].title
-        
-        /*let dateFormatter = DateFormatter()
-        let mostRecentDateString = dateFormatter.string(from: documents[indexPath.row].mostRecentEdit!)
-        cell.?.text = mostRecentDateString*/
-        
-
-        // Configure the cell...
-
         return cell
     }
     

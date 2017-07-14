@@ -44,6 +44,7 @@ class NewDocumentViewController: UIViewController, UITextViewDelegate {
         if let doc = self.document {
             // We are editing an existing document
             projectTitle.text = doc.title
+            projectText.text = doc.text
         }
         
         // Do any additional setup after loading the view.
@@ -66,7 +67,8 @@ class NewDocumentViewController: UIViewController, UITextViewDelegate {
         var selectedType: String = "Tidbit"
         if segmentedTypeControl.selectedSegmentIndex == 0 {
             selectedType = "Tidbit"
-        } else if segmentedTypeControl.selectedSegmentIndex == 1 {
+        }
+        else if segmentedTypeControl.selectedSegmentIndex == 1 {
             selectedType = "Project"
         }
         
@@ -106,25 +108,21 @@ class NewDocumentViewController: UIViewController, UITextViewDelegate {
 //        print("Title: ", projectTitle.text)
 //        print("Body: ", projectText.text)
         
-        Alamofire.request("https://tidbits-57ae3.firebaseio.com/documents.json", method: .post, parameters: newDoc.toJSON(), encoding: JSONEncoding.default).responseJSON(completionHandler: {
-            response in
+            Alamofire.request("https://tidbits-57ae3.firebaseio.com/documents.json", method: .post, parameters: newDoc.toJSON(), encoding: JSONEncoding.default).responseJSON(completionHandler: {
+                response in
             
-            switch response.result {
-            case .success:
-                self.dismiss(animated: true, completion: nil)
-                break
+                switch response.result {
+                case .success:
+                    self.dismiss(animated: true, completion: nil)
+                    break
                 
-            case .failure:
-                //TODO: display an error dialog
-                print("Failed to save new document")
-                break
-            }
-            
-        })
+                case .failure:
+                    //TODO: display an error dialog
+                    print("Failed to save new document")
+                    break
+                }
+            })
         }
-    
-        
-        
     }
 
     /*

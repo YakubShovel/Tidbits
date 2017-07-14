@@ -19,6 +19,7 @@
 		30A0B8591F165E5200A3E739 /* NewDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8581F165E5200A3E739 /* NewDocumentViewController.swift */; };
 		30A0B85F1F169C0600A3E739 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B85E1F169C0600A3E739 /* Document.swift */; };
 		30A0B8611F178A7600A3E739 /* TidbitsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8601F178A7600A3E739 /* TidbitsCollectionViewController.swift */; };
+		30BFFFA21F1802FF00437AF3 /* TidbitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30BFFFA11F1802FF00437AF3 /* TidbitCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		30A0B8581F165E5200A3E739 /* NewDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewDocumentViewController.swift; sourceTree = "<group>"; };
 		30A0B85E1F169C0600A3E739 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		30A0B8601F178A7600A3E739 /* TidbitsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TidbitsCollectionViewController.swift; sourceTree = "<group>"; };
+		30BFFFA11F1802FF00437AF3 /* TidbitCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TidbitCollectionViewCell.swift; sourceTree = "<group>"; };
 		5C602FA69FAC38FEA386A6C2 /* Pods-Edun_PhotoVault.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edun_PhotoVault.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Edun_PhotoVault/Pods-Edun_PhotoVault.debug.xcconfig"; sourceTree = "<group>"; };
 		C1CE650C156A0B2969265894 /* Pods-Edun_PhotoVault.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Edun_PhotoVault.release.xcconfig"; path = "Pods/Target Support Files/Pods-Edun_PhotoVault/Pods-Edun_PhotoVault.release.xcconfig"; sourceTree = "<group>"; };
 		DE0F34C4EEAAC6670AAFBC15 /* Pods_Edun_PhotoVault.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Edun_PhotoVault.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +79,7 @@
 				30A0B83C1F13D18A00A3E739 /* LoginViewController.swift */,
 				30A0B8521F13FE8900A3E739 /* HomeScreenTabBarController.swift */,
 				30A0B8601F178A7600A3E739 /* TidbitsCollectionViewController.swift */,
+				30BFFFA11F1802FF00437AF3 /* TidbitCollectionViewCell.swift */,
 				30A0B85E1F169C0600A3E739 /* Document.swift */,
 				30A0B8581F165E5200A3E739 /* NewDocumentViewController.swift */,
 				30A0B8541F14056700A3E739 /* ProjectsTableViewController.swift */,
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30BFFFA21F1802FF00437AF3 /* TidbitCollectionViewCell.swift in Sources */,
 				30A0B8531F13FE8900A3E739 /* HomeScreenTabBarController.swift in Sources */,
 				30A0B8611F178A7600A3E739 /* TidbitsCollectionViewController.swift in Sources */,
 				30A0B8551F14056700A3E739 /* ProjectsTableViewController.swift in Sources */,
