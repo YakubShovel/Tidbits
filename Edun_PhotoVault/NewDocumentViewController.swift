@@ -17,6 +17,9 @@ class NewDocumentViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var segmentedTypeControl: UISegmentedControl!
 
     var document: Document?
+
+    var currentTitle: String?
+    var currentText: String?
     
     func currentDateFormattedForScreen() -> String {
         let currentDate = Date()
@@ -45,6 +48,10 @@ class NewDocumentViewController: UIViewController, UITextViewDelegate {
             // We are editing an existing document
             projectTitle.text = doc.title
             projectText.text = doc.text
+            
+            self.currentTitle = doc.title
+            self.currentText = doc.text
+            
             
             if self.document?.identifier == "Tidbit" {
                 segmentedTypeControl.selectedSegmentIndex = 0
@@ -87,7 +94,10 @@ class NewDocumentViewController: UIViewController, UITextViewDelegate {
             doc.title = projectTitle.text
             doc.text = projectText.text
             doc.identifier = selectedType
-            doc.mostRecentEdit = Date()
+            
+            if ((self.currentTitle! != doc.title!) || (self.currentText! != doc.text!)) {
+                doc.mostRecentEdit = Date()
+            }
             
             
             if let key = doc.key {
