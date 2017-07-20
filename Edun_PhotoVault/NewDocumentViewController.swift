@@ -80,6 +80,7 @@ class NewDocumentViewController: UIViewController, UITextViewDelegate {
             doc.title = projectTitle.text
             doc.text = projectText.text
             doc.identifier = selectedType
+            doc.mostRecentEdit = Date()
             
             
             if let key = doc.key {
