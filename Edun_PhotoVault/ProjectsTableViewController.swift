@@ -31,6 +31,10 @@ class ProjectsTableViewController: UITableViewController {
                         }
                     }
                 }
+
+                //sort the projects according to the most recently editted
+                self.documents.sort { $0.mostRecentEdit! > $1.mostRecentEdit! }
+                
                 self.tableView.reloadData()
             }
         })
