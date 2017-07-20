@@ -11,8 +11,6 @@ import Alamofire
 import BouncyLayout
 
 
-//private let reuseIdentifier = "Cell"
-
 class TidbitsCollectionViewController: UICollectionViewController {
     
     var documents: [Document] = []
@@ -52,9 +50,8 @@ class TidbitsCollectionViewController: UICollectionViewController {
         //collectionView?.collectionViewLayout = bouncyLayout
         let layout = collectionViewLayout as! UICollectionViewFlowLayout
         layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
-        
-        
     }
+    
     
     //MARK: Number of sections and number of items in section
     override func numberOfSections(in collectionView: UICollectionView) -> Int { return 1 }
@@ -65,9 +62,21 @@ class TidbitsCollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tidbitCell", for: indexPath) as! TidbitCollectionViewCell
         
         cell.tidbitText?.text = documents[indexPath.row].text
-        
 
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "navToEditFromCollectionCell" {
+            let cell = sender as! UICollectionViewCell
+            let indexPath = collectionView?.indexPath(for: cell)
+            let selectedDocument = documents[(indexPath?.row)!]
+            
+            let documentNavController = segue.destination as! UINavigationController
+            let documentVC = documentNavController.topViewController as! NewDocumentViewController
+            documentVC.document = selectedDocument
+
+        }
     }
     
 }

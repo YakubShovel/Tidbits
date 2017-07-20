@@ -45,6 +45,13 @@ class NewDocumentViewController: UIViewController, UITextViewDelegate {
             // We are editing an existing document
             projectTitle.text = doc.title
             projectText.text = doc.text
+            
+            if self.document?.identifier == "Tidbit" {
+                segmentedTypeControl.selectedSegmentIndex = 0
+            }
+            else if self.document?.identifier == "Project" {
+                segmentedTypeControl.selectedSegmentIndex = 1
+            }
         }
         
         // Do any additional setup after loading the view.
