@@ -8,14 +8,10 @@
 
 import UIKit
 import Alamofire
-import BouncyLayout
-
 
 class TidbitsCollectionViewController: UICollectionViewController {
     
     var documents: [Document] = []
-
-    lazy var bouncyLayout = BouncyLayout(style: .regular)
     
     
     override func viewWillAppear(_ animated: Bool) {
