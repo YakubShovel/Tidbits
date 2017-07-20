@@ -1,6 +1,5 @@
 PODS:
   - Alamofire (4.5.0)
-  - BouncyLayout (1.1.0)
   - Firebase (4.0.3):
     - Firebase/Core (= 4.0.3)
   - Firebase/Core (4.0.3):
@@ -19,19 +18,19 @@ PODS:
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - KeychainSwift (8.0.2)
+  - lottie-ios (1.5.2)
   - SmileLock (2.0.2)
 
 DEPENDENCIES:
   - Alamofire
-  - BouncyLayout
   - Firebase
   - Gloss
   - KeychainSwift
+  - lottie-ios
   - SmileLock
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
-  BouncyLayout: f91c6504437a61acd733404f55f75bd8154f5840
   Firebase: 9e33fdfbca37cab635c693883caa90a4475b842b
   FirebaseAnalytics: ad41720e3e67fc63fbe3d2948d3e26932a8de311
   FirebaseCore: c709067051de07bdaffdc4e735cd7299a23c463a
@@ -39,8 +38,9 @@ SPEC CHECKSUMS:
   Gloss: 4e036074610fdb993abcb958ebcd7332588e2333
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   KeychainSwift: 213db04dfe7244988e61f77c72a2afb2f775954a
+  lottie-ios: 255a0e95973a5c4424e809d7a5c19f7384c73e84
   SmileLock: 7ae1e174b4697c0a33882dab838fc0bea94432f4
 
-PODFILE CHECKSUM: d7e15192d256373e34580b4ab6b38539e93a3eea
+PODFILE CHECKSUM: baf47bb59724b5406114dc6a602994ed48a66b3e
 
 COCOAPODS: 1.2.1
