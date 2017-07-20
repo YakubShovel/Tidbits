@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		02434944BA1B67431A82CF9C /* Pods_Edun_PhotoVault.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0F34C4EEAAC6670AAFBC15 /* Pods_Edun_PhotoVault.framework */; };
+		2A3EBBD61F20D7B700A353FB /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A3EBBD51F20D7B700A353FB /* GoogleService-Info (1).plist */; };
+		2A3EBBD81F20E40400A353FB /* UserSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3EBBD71F20E40400A353FB /* UserSettingViewController.swift */; };
 		30A0B83B1F13D18A00A3E739 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B83A1F13D18A00A3E739 /* AppDelegate.swift */; };
 		30A0B83D1F13D18A00A3E739 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B83C1F13D18A00A3E739 /* LoginViewController.swift */; };
 		30A0B8401F13D18A00A3E739 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0B83E1F13D18A00A3E739 /* Main.storyboard */; };
@@ -15,7 +17,6 @@
 		30A0B8451F13D18A00A3E739 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30A0B8431F13D18A00A3E739 /* LaunchScreen.storyboard */; };
 		30A0B8531F13FE8900A3E739 /* HomeScreenTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8521F13FE8900A3E739 /* HomeScreenTabBarController.swift */; };
 		30A0B8551F14056700A3E739 /* ProjectsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8541F14056700A3E739 /* ProjectsTableViewController.swift */; };
-		30A0B8571F16530900A3E739 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 30A0B8561F16530900A3E739 /* GoogleService-Info (1).plist */; };
 		30A0B8591F165E5200A3E739 /* NewDocumentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8581F165E5200A3E739 /* NewDocumentViewController.swift */; };
 		30A0B85F1F169C0600A3E739 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B85E1F169C0600A3E739 /* Document.swift */; };
 		30A0B8611F178A7600A3E739 /* TidbitsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30A0B8601F178A7600A3E739 /* TidbitsCollectionViewController.swift */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2A3EBBD51F20D7B700A353FB /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
+		2A3EBBD71F20E40400A353FB /* UserSettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSettingViewController.swift; sourceTree = "<group>"; };
 		30A0B8371F13D18A00A3E739 /* Edun_PhotoVault.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Edun_PhotoVault.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		30A0B83A1F13D18A00A3E739 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		30A0B83C1F13D18A00A3E739 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -32,7 +35,6 @@
 		30A0B8461F13D18A00A3E739 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30A0B8521F13FE8900A3E739 /* HomeScreenTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HomeScreenTabBarController.swift; path = ../HomeScreenTabBarController.swift; sourceTree = "<group>"; };
 		30A0B8541F14056700A3E739 /* ProjectsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProjectsTableViewController.swift; sourceTree = "<group>"; };
-		30A0B8561F16530900A3E739 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info (1).plist"; path = "../../../../Downloads/GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		30A0B8581F165E5200A3E739 /* NewDocumentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewDocumentViewController.swift; sourceTree = "<group>"; };
 		30A0B85E1F169C0600A3E739 /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		30A0B8601F178A7600A3E739 /* TidbitsCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TidbitsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -82,11 +84,12 @@
 				30BFFFA11F1802FF00437AF3 /* TidbitCollectionViewCell.swift */,
 				30A0B85E1F169C0600A3E739 /* Document.swift */,
 				30A0B8581F165E5200A3E739 /* NewDocumentViewController.swift */,
+				2A3EBBD71F20E40400A353FB /* UserSettingViewController.swift */,
 				30A0B8541F14056700A3E739 /* ProjectsTableViewController.swift */,
 				30A0B83E1F13D18A00A3E739 /* Main.storyboard */,
 				30A0B8411F13D18A00A3E739 /* Assets.xcassets */,
 				30A0B8431F13D18A00A3E739 /* LaunchScreen.storyboard */,
-				30A0B8561F16530900A3E739 /* GoogleService-Info (1).plist */,
+				2A3EBBD51F20D7B700A353FB /* GoogleService-Info (1).plist */,
 				30A0B8461F13D18A00A3E739 /* Info.plist */,
 			);
 			path = Edun_PhotoVault;
@@ -174,7 +177,7 @@
 				30A0B8451F13D18A00A3E739 /* LaunchScreen.storyboard in Resources */,
 				30A0B8421F13D18A00A3E739 /* Assets.xcassets in Resources */,
 				30A0B8401F13D18A00A3E739 /* Main.storyboard in Resources */,
-				30A0B8571F16530900A3E739 /* GoogleService-Info (1).plist in Resources */,
+				2A3EBBD61F20D7B700A353FB /* GoogleService-Info (1).plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +240,7 @@
 				30A0B8531F13FE8900A3E739 /* HomeScreenTabBarController.swift in Sources */,
 				30A0B8611F178A7600A3E739 /* TidbitsCollectionViewController.swift in Sources */,
 				30A0B8551F14056700A3E739 /* ProjectsTableViewController.swift in Sources */,
+				2A3EBBD81F20E40400A353FB /* UserSettingViewController.swift in Sources */,
 				30A0B83D1F13D18A00A3E739 /* LoginViewController.swift in Sources */,
 				30A0B85F1F169C0600A3E739 /* Document.swift in Sources */,
 				30A0B83B1F13D18A00A3E739 /* AppDelegate.swift in Sources */,
