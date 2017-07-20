@@ -12,14 +12,13 @@ class TidbitCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var tidbitText: UILabel!
     
-    
-    /*override init(frame: CGRect) {
-        super.init(frame: frame)
+    override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        self.layer.cornerRadius = self.frame.size.width / 2
         
-        //tidbitText = UILabel(frame: CGRect(x: 0, y: imageView.frame.size.height, width: frame.size.width, height: frame.size.height/3))
-        tidbitText.textAlignment = .center
-        contentView.addSubview(tidbitText)
         
-    }*/
+        
+        
+    }
 
 }

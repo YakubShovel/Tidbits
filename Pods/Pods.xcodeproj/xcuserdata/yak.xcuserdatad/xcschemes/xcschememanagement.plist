@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BouncyLayout.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Gloss.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -52,17 +57,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>4CFF6F1FF7EDA804744BA4EDC6FEB3E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>596E2BF0D45B6D6BBF2898BEBD5295DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6AE51B1FFA4A62E08DBC3B8B6AFE3C18</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>AFBC2E9D098A059F43B4A22365E9CC98</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E9B9A259CB1DABF804F2717CC7D0DD47</key>
 		<dict>
 			<key>primary</key>
 			<true/>
