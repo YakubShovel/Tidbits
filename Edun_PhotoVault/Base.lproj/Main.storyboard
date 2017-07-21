@@ -129,7 +129,13 @@
                             <outlet property="delegate" destination="VJv-g9-7re" id="YmW-BQ-qHn"/>
                         </connections>
                     </collectionView>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Tidbits" id="lMQ-0y-o7M">
+                        <barButtonItem key="leftBarButtonItem" image="ic_settings_white" id="i6f-Pi-j2W">
+                            <connections>
+                                <segue destination="yDf-fs-JlK" kind="show" id="kgJ-hs-mug"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="kVo-1P-Xum">
                             <connections>
                                 <segue destination="6RZ-WA-o0q" kind="presentation" id="DfI-9l-hSa"/>
@@ -137,11 +143,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" translucent="NO" prompted="NO"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pVR-6V-F00" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5759.1999999999998" y="1139.2803598200901"/>
-            <point key="canvasLocation" x="4833" y="528"/>
         </scene>
         <!--New Document View Controller-->
         <scene sceneID="wh3-tr-rLm">
@@ -309,11 +315,11 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Spn-gZ-1eQ" id="5JJ-AD-NKi">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HRD-GX-zDl">
-                                            <rect key="frame" x="15" y="0.0" width="345" height="43"/>
+                                            <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -334,7 +340,7 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="dfH-BK-pXl">
-                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="NS9-tk-4dx">
+                        <barButtonItem key="leftBarButtonItem" image="ic_settings_white" id="NS9-tk-4dx">
                             <connections>
                                 <action selector="menu_action:" destination="1d1-aT-waU" id="bLX-Sg-3vR"/>
                                 <segue destination="yDf-fs-JlK" kind="show" id="8ob-yJ-mgs"/>
@@ -410,15 +416,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOf-Q7-wkz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4820" y="1139.2803598200901"/>
-            <point key="canvasLocation" x="3894" y="528"/>
         </scene>
     </scenes>
     <resources>
         <image name="ProjectsIcon" width="24" height="24"/>
         <image name="TidbitsT" width="24" height="24"/>
         <image name="TidbitsTitle" width="1542" height="1319"/>
+        <image name="ic_settings_white" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZKM-xw-vUV"/>
+        <segue reference="kgJ-hs-mug"/>
+        <segue reference="DfI-9l-hSa"/>
     </inferredMetricsTieBreakers>
 </document>
