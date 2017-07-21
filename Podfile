@@ -11,5 +11,7 @@ pod 'KeychainSwift'
 pod 'Firebase'
 pod 'Alamofire'
 pod 'Gloss'
+pod 'lottie-ios'
+
 
 end

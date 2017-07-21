@@ -9,13 +9,10 @@
 import UIKit
 import Alamofire
 
-//private let reuseIdentifier = "Cell"
-
 class TidbitsCollectionViewController: UICollectionViewController {
-
     
     var documents: [Document] = []
-
+    
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -38,32 +35,44 @@ class TidbitsCollectionViewController: UICollectionViewController {
                 self.collectionView?.reloadData()
             }
         })
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    
-    override func numberOfSections(in collectionView: UICollectionView) -> Int {
-    // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-    
-    /*override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        //THIS FUNCTION IS CAUSING THE SIG ABORT!!!
-        return documents.count
-    }*/
+        let collectionViewWidth = collectionView?.frame.width
+        let itemWidth = (collectionViewWidth! - 2) / 3.5
+        //collectionView?.collectionViewLayout = bouncyLayout
+        let layout = collectionViewLayout as! UICollectionViewFlowLayout
+        layout.itemSize = CGSize(width: itemWidth, height: itemWidth)
+    }
+    
+    
+    //MARK: Number of sections and number of items in section
+    override func numberOfSections(in collectionView: UICollectionView) -> Int { return 1 }
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int { return documents.count }
+    
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "tidbitCell", for: indexPath) as! TidbitCollectionViewCell
         
-        cell.tidbitText?.text = documents[indexPath.row].text   
-        
-                // Configure the cell
-        
+        cell.tidbitText?.text = documents[indexPath.row].text
+
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "navToEditFromCollectionCell" {
+            let cell = sender as! UICollectionViewCell
+            let indexPath = collectionView?.indexPath(for: cell)
+            let selectedDocument = documents[(indexPath?.row)!]
+            
+            let documentNavController = segue.destination as! UINavigationController
+            let documentVC = documentNavController.topViewController as! NewDocumentViewController
+            documentVC.document = selectedDocument
+
+        }
     }
     
 }

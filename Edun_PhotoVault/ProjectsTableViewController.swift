@@ -31,6 +31,10 @@ class ProjectsTableViewController: UITableViewController {
                         }
                     }
                 }
+
+                //sort the projects according to the most recently editted
+                self.documents.sort { $0.mostRecentEdit! > $1.mostRecentEdit! }
+                
                 self.tableView.reloadData()
             }
         })
@@ -77,7 +81,7 @@ class ProjectsTableViewController: UITableViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier == "navToEditFromCell" {
+        if segue.identifier == "navToEditFromTableCell" {
             
             let cell = sender as! UITableViewCell
             let indexPath = tableView.indexPath(for: cell)

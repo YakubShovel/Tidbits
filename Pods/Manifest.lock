@@ -18,6 +18,7 @@ PODS:
   - GoogleToolboxForMac/NSData+zlib (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - KeychainSwift (8.0.2)
+  - lottie-ios (1.5.2)
   - SmileLock (2.0.2)
 
 DEPENDENCIES:
@@ -25,6 +26,7 @@ DEPENDENCIES:
   - Firebase
   - Gloss
   - KeychainSwift
+  - lottie-ios
   - SmileLock
 
 SPEC CHECKSUMS:
@@ -36,8 +38,9 @@ SPEC CHECKSUMS:
   Gloss: 4e036074610fdb993abcb958ebcd7332588e2333
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   KeychainSwift: 213db04dfe7244988e61f77c72a2afb2f775954a
+  lottie-ios: 255a0e95973a5c4424e809d7a5c19f7384c73e84
   SmileLock: 7ae1e174b4697c0a33882dab838fc0bea94432f4
 
-PODFILE CHECKSUM: 06cb49ce55142cabf32ff2ec768324fda7647536
+PODFILE CHECKSUM: baf47bb59724b5406114dc6a602994ed48a66b3e
 
 COCOAPODS: 1.2.1

@@ -8,6 +8,7 @@
 
 import UIKit
 import Alamofire
+import Lottie
 
 class NewDocumentViewController: UIViewController, UITextViewDelegate {
 
@@ -15,8 +16,12 @@ class NewDocumentViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var projectTitle: UITextField!
     @IBOutlet weak var projectText: UITextView!
     @IBOutlet weak var segmentedTypeControl: UISegmentedControl!
-
+    @IBOutlet weak var animationBox: UIView!
+    
     var document: Document?
+
+    var currentTitle: String?
+    var currentText: String?
     
     func currentDateFormattedForScreen() -> String {
         let currentDate = Date()
@@ -39,12 +44,32 @@ class NewDocumentViewController: UIViewController, UITextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        let animationView = LOTAnimationView(name: "pencil_write")
+        animationView.frame = CGRect(x: 0, y: 0, width: 160, height: 90)
+        animationBox.addSubview(animationView)
+        animationView.play()
+
+        
+        
+        
         dateLabel.text = currentDateFormattedForScreen()
         
         if let doc = self.document {
             // We are editing an existing document
             projectTitle.text = doc.title
             projectText.text = doc.text
+            
+            self.currentTitle = doc.title
+            self.currentText = doc.text
+            
+            
+            if self.document?.identifier == "Tidbit" {
+                segmentedTypeControl.selectedSegmentIndex = 0
+            }
+            else if self.document?.identifier == "Project" {
+                segmentedTypeControl.selectedSegmentIndex = 1
+            }
         }
         
         // Do any additional setup after loading the view.
@@ -80,6 +105,10 @@ class NewDocumentViewController: UIViewController, UITextViewDelegate {
             doc.title = projectTitle.text
             doc.text = projectText.text
             doc.identifier = selectedType
+            
+            if ((self.currentTitle! != doc.title!) || (self.currentText! != doc.text!)) {
+                doc.mostRecentEdit = Date()
+            }
             
             
             if let key = doc.key {
