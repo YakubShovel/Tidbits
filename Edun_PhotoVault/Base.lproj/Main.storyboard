@@ -19,14 +19,14 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Cf5-60-CNS">
-                                <rect key="frame" x="63" y="277" width="249" height="317"/>
+                                <rect key="frame" x="63" y="257" width="249" height="229"/>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password Query" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5C-vh-MH1">
-                                <rect key="frame" x="16" y="123" width="343" height="127"/>
+                                <rect key="frame" x="16" y="103" width="343" height="127"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="127" id="P1l-FZ-xMd"/>
                                 </constraints>
@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TidbitsTitle" translatesAutoresizingMaskIntoConstraints="NO" id="ia2-25-slV">
-                                <rect key="frame" x="63" y="20" width="202" height="145"/>
+                                <rect key="frame" x="63" y="0.0" width="202" height="145"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="145" id="NQ1-5E-F4U"/>
                                 </constraints>
@@ -232,7 +232,6 @@
                     <connections>
                         <segue destination="kFO-8k-gje" kind="relationship" relationship="viewControllers" id="q49-Gs-Icy"/>
                         <segue destination="nQn-pA-ygp" kind="relationship" relationship="viewControllers" id="awW-v1-4ku"/>
-                        <segue destination="RiS-U2-2kE" kind="relationship" relationship="viewControllers" id="egg-TE-47t"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YfS-Ok-ABn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -248,14 +247,30 @@
                         <viewControllerLayoutGuide type="bottom" id="fL8-Jx-nfS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Kc9-Jp-lnT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EAc-oB-qHb">
-                                <rect key="frame" x="104" y="124" width="167" height="162"/>
+                                <rect key="frame" x="0.0" y="58" width="167" height="162"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.40361499786376953" green="0.14434176683425903" blue="0.42460078001022339" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Kaiming Cheng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YB-uE-34k">
+                                <rect key="frame" x="1" y="262" width="143" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Gj-kM-V7C">
+                                <rect key="frame" x="0.0" y="341" width="123" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Change Password"/>
+                                <connections>
+                                    <action selector="changePassword:" destination="yDf-fs-JlK" eventType="touchUpInside" id="LD0-bj-hOV"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="pFZ-lT-Mi7"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -266,7 +281,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOe-Uy-cGt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3079.1999999999998" y="1082.608695652174"/>
+            <point key="canvasLocation" x="2542" y="-716"/>
         </scene>
         <!--Projects Table View Controller-->
         <scene sceneID="U8w-Zw-IZI">
@@ -305,6 +320,12 @@
                     </tableView>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="dfH-BK-pXl">
+                        <barButtonItem key="leftBarButtonItem" systemItem="organize" id="NS9-tk-4dx">
+                            <connections>
+                                <action selector="menu_action:" destination="1d1-aT-waU" id="bLX-Sg-3vR"/>
+                                <segue destination="yDf-fs-JlK" kind="show" id="8ob-yJ-mgs"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="compose" id="LSj-4V-Cw1">
                             <connections>
                                 <segue destination="6RZ-WA-o0q" kind="presentation" id="ZKM-xw-vUV"/>
@@ -376,25 +397,6 @@
             </objects>
             <point key="canvasLocation" x="4820" y="1139.2803598200901"/>
         </scene>
-        <!--Item-->
-        <scene sceneID="HTJ-mQ-WAC">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RiS-U2-2kE" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="S31-7y-AvO"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Oji-Og-4Bn">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="yDf-fs-JlK" kind="relationship" relationship="rootViewController" id="HQE-VZ-BUo"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aT2-sr-b0p" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2140" y="1082.608695652174"/>
-        </scene>
     </scenes>
     <resources>
         <image name="ProjectsIcon" width="24" height="24"/>
@@ -402,6 +404,6 @@
         <image name="TidbitsTitle" width="1542" height="1319"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DfI-9l-hSa"/>
+        <segue reference="ZKM-xw-vUV"/>
     </inferredMetricsTieBreakers>
 </document>

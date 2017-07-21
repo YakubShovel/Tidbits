@@ -10,7 +10,9 @@
 import UIKit
 import Firebase
 
-class UserSettingViewController: UIViewController {
+class UserSettingViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate  {
+    
+    let image_picker = UIImagePickerController()
 
     @IBOutlet weak var my_imageView: UIImageView!
 
@@ -20,6 +22,7 @@ class UserSettingViewController: UIViewController {
         let tap_gesture = UITapGestureRecognizer(target: self, action: #selector(self.image_tapped(gesture:)))
         my_imageView.isUserInteractionEnabled = true
         my_imageView.addGestureRecognizer(tap_gesture)
+        image_picker.delegate = self
     }
     
     func image_tapped(gesture: UITapGestureRecognizer){
@@ -42,12 +45,36 @@ class UserSettingViewController: UIViewController {
     
     func camera_action (action : UIAlertAction){
         
+        //Open Camera
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+        image_picker.sourceType = .camera
+        self.present(image_picker, animated: true, completion: nil)
+        }
+        else{
+            print("Camera is not Aviable")
+        }
     }
     
     func gallery_action (action : UIAlertAction){
         
+        //Open Gallery
+        image_picker.sourceType = .photoLibrary
+        image_picker.allowsEditing = true
+        self.present(image_picker, animated: true, completion: nil)
+        
     }
     
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        // set image to imageView
+        my_imageView.image = info[UIImagePickerControllerEditedImage] as! UIImage
+        dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func changePassword(_ sender: Any) {
+        
+        UserDefaults.standard.set(nil, forKey: "password")
+
+    }
     
 
 
